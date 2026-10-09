@@ -1,0 +1,33 @@
+[extension]
+id = "terminal-browser"
+title = "Terminal browser"
+description = "Open links in a Rozi browser pane or reuse a browser in this session"
+version = "0.1.0"
+api = 1
+platforms = ["linux", "macos"]
+homepage = "https://github.com/tui-lipan/rozi-terminal-browser"
+
+[[commands]]
+id = "open"
+label = "Open in terminal browser…"
+exec = ["python3", "{extension_dir}/bin/terminal_browser.py", "open"]
+key = "b"
+
+[[commands]]
+id = "new-pane"
+label = "Open in new browser pane…"
+exec = ["python3", "{extension_dir}/bin/terminal_browser.py", "new-pane"]
+
+[[commands]]
+id = "browsers"
+label = "Terminal browsers…"
+exec = ["python3", "{extension_dir}/bin/terminal_browser.py", "browsers"]
+
+[[link_handlers]]
+schemes = ["http", "https"]
+command = "open"
+
+[settings]
+browser = "terminal-browser"
+reuse = true
+focus = true
