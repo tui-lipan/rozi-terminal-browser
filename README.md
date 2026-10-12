@@ -84,6 +84,11 @@ The wrapper reports the browser's pane and session identity, so terminal-browser
 reuse it without a built-in rozi adapter. The socket closes when the browser exits; there is no
 extension daemon or registry file. URLs never become shell command text.
 
+The extension launches terminal-browser with `TERMINAL_BROWSER_PRESENT=full` as a temporary
+workaround for upstream partial-update transport issues in Rozi. This overrides any inherited
+presentation setting for new browser panes. Close and reopen existing browser panes to apply it;
+opening another tab in an existing browser does not change that browser's environment.
+
 The bridge supports pane identity, listing, and focus. It does not advertise terminal-browser's
 automatic splitting or text-sending operations. Use this extension's **Open in new browser pane…**
 command to create browser panes. It reads no rozi state files and opens no rozi IPC sockets directly.
