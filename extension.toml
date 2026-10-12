@@ -2,7 +2,7 @@
 id = "terminal-browser"
 title = "Terminal browser"
 description = "Open links in a Rozi browser pane or reuse a browser in this session"
-version = "0.1.0"
+version = "0.1.1"
 api = 1
 platforms = ["linux", "macos"]
 homepage = "https://github.com/tui-lipan/rozi-terminal-browser"
