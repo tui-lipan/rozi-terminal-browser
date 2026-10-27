@@ -273,8 +273,6 @@ def main(argv=None):
             env.pop("ROZI_SOURCE_PANE", None)
             rozi = Rozi(env)
             with TerminalBridge(rozi).running() as browser_env:
-                # Upstream partial updates need reusable-file transport fixes for Rozi.
-                browser_env["TERMINAL_BROWSER_PRESENT"] = "full"
                 status = subprocess.call([program, "open", "--no-merge", validate_url(url)], env=browser_env)
                 if status:
                     raise ExtensionError(f"terminal-browser exited with status {status}; check its installation and display access")
