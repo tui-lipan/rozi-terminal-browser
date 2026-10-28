@@ -5,12 +5,13 @@ The extension creates a browser pane when none exists, reuses a browser in the s
 and asks which browser to use when several are open. Installing the extension supplies the link
 handler; no config-file edit is needed.
 
+![A reading list beside rozi.tui-lipan.dev open in a terminal-browser pane](docs/screenshot.webp)
+
 ## Requirements
 
 - Linux or macOS, Python 3.11 or newer available as `python3`.
 - terminal-browser installed and available on `PATH`.
-- A rozi build whose `rozi api describe` includes `extension-link-handlers`.
-  This requires the extension link-handler feature, not just extension API 1.
+- rozi 0.0.36 or newer.
 - An attached local session and a terminal capable of displaying rozi's terminal images.
 
 Remote sessions and native Windows are not supported by this extension. It never installs or
